@@ -16,12 +16,13 @@ directory '/opt/osmosis' do
   mode 0755
 end
 
-bash 'wget_osmosis' do
+bash 'install_osmosis' do
   action :nothing
   cwd '/tmp'
   code <<-EOH
     wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz
     tar zxf osmosis/osmosis-latest.tgz -C /opt/osmosis
   EOH
+  not_if 'test -d /opt/osmosis/bin/osmosis'
 end
 
