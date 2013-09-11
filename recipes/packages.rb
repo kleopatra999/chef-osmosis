@@ -9,7 +9,7 @@
 
 include_recipe 'apt'
 
-%w(dh-make openjdk-7-jre).each do |p|
+%w(openjdk-7-jre).each do |p|
   package p do
     action :install
   end
