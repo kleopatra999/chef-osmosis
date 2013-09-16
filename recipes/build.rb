@@ -17,7 +17,7 @@ directory '/opt/osmosis' do
 end
 
 bash 'install_osmosis' do
-  action :nothing
+  action :run
   cwd '/tmp'
   code <<-EOH
     wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz
