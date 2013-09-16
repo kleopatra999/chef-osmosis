@@ -23,6 +23,6 @@ bash 'install_osmosis' do
     wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz
     tar zxf osmosis-latest.tgz -C /opt/osmosis
   EOH
-  not_if 'test -d /opt/osmosis/bin/osmosis'
+  not_if 'test -f /opt/osmosis/bin/osmosis'
 end
 
