@@ -1,6 +1,6 @@
 name             'osmosis'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Mapzen'
+maintainer_email 'grant@mapzen.com'
 license          'All rights reserved'
 description      'Installs/Configures osmosis'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
