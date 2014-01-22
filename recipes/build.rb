@@ -9,20 +9,22 @@
 
 include_recipe 'git'
 
-directory '/opt/osmosis' do
-  action :create
-  owner 'root'
-  group 'root'
-  mode 0755
+directory node[:osmosis][:installdir] do
+  owner   node[:osmosis][:user]
+  group   node[:osmosis][:group]
+  mode    node[:osmosis][:dirmode]
 end
 
-bash 'install_osmosis' do
-  action :run
-  cwd '/tmp'
-  code <<-EOH
-    wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz
-    tar zxf osmosis-latest.tgz -C /opt/osmosis
-  EOH
-  not_if 'test -f /opt/osmosis/bin/osmosis'
+remote_file "#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}" do
+  source    node[:osmosis][:remote_source]
+  notifies  :run, 'bash[extract-osmosis]', :immediately
+end
+
+bash 'extract-osmosis' do
+  action  :nothing
+  cwd     node[:osmosis][:installdir]
+  code <<-BASH
+    tar zxf #{node[:osmosis][:filename]}
+  BASH
 end
 

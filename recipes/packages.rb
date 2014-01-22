@@ -9,9 +9,11 @@
 
 include_recipe 'apt'
 
-%w(openjdk-7-jre).each do |p|
-  package p do
-    action :install
+if node[:osmosis][:java] == true
+  %w(openjdk-7-jre).each do |p|
+    package p do
+      action :install
+    end
   end
 end
 

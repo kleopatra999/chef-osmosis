@@ -1,61 +1,43 @@
-osm2pgsql Cookbook
+osmosis Cookbook
 ==================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
-
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - osm2pgsql needs toaster to brown your bagel.
-
-Attributes
-----------
-TODO: List you cookbook attributes here.
-
-e.g.
-#### osm2pgsql::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['osm2pgsql']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Downloads and extracts osmosis
 
 Usage
 -----
-#### osm2pgsql::default
-TODO: Write usage instructions for each cookbook.
+#### osmosis::default
+Simply ```include_recipe 'osmosis::default'```
 
-e.g.
-Just include `osm2pgsql` in your node's `run_list`:
+Attributes
+----------
+#### default
+* installdir
+Where should osmosis be installed.
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[osm2pgsql]"
-  ]
-}
-```
+* user
+User to install osmosis as. The user will
+not be created by the cookbook, so it must
+already exist.
+
+* group
+Group to install osmosis with.
+
+* dirmode
+Directory mode for installdir.
+
+* remote_source
+Where to download osmosis from.
+
+* filename
+Derive the filename from the last portion of the
+url download string.
+
+* java
+Should we install java?
+Default: true
+
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
@@ -65,4 +47,5 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: grant@mapzen.com
+
