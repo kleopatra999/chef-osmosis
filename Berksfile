@@ -1,6 +1,6 @@
 site :opscode
 
-%w(apt git).each do |c|
+%w(apt).each do |c|
   cookbook c
 end
 

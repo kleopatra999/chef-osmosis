@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'git'
-
 directory node[:osmosis][:installdir] do
   owner   node[:osmosis][:user]
   group   node[:osmosis][:group]
