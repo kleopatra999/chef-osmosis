@@ -1,7 +1,7 @@
 # default attributes
 #
 
-default[:osmosis][:install_type]  = 'deb' # 'pkg' or 'tgz'
+default[:osmosis][:install_type]  = 'pkg' # 'pkg' or 'tgz'
 default[:osmosis][:pkg_version]   = '0.0.1'
 default[:osmosis][:installdir]    = '/opt/osmosis'
 default[:osmosis][:user]          = 'root'
