@@ -8,5 +8,5 @@
 #
 
 include_recipe 'osmosis::packages'
-include_recipe 'osmosis::build'
+include_recipe 'osmosis::install'
 
