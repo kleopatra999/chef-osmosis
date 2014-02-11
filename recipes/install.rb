@@ -47,9 +47,9 @@ when 'pkg'
     key           'https://s3.amazonaws.com/mapzen-debian/mapzen-debian.gpg.key'
   end
 
-  package 'mapzen-osrm' do
+  package 'mapzen-osmosis' do
     action  :install
-    version node[:osrm][:pkg_version]
+    version node[:osmosis][:pkg_version]
   end
 end
 
