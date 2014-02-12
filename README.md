@@ -10,8 +10,14 @@ Simply ```include_recipe 'osmosis::default'```
 Attributes
 ----------
 #### default
+* install_type
+'pkg' or 'tgz'. The former installs osmosis
+as a debian package from the Mapzen debian repo,
+the latter pulls from node[:osmosis][:remote_source] 
+and unpacks the tarball to node[:osmosis][:installdir].
+
 * installdir
-Where should osmosis be installed.
+Where should osmosis be installed if using install_type == 'pkg'
 
 * user
 User to install osmosis as. The user will
@@ -25,7 +31,7 @@ Group to install osmosis with.
 Directory mode for installdir.
 
 * remote_source
-Where to download osmosis from.
+Where to download osmosis from if using install_type == 'pkg'
 
 * filename
 Derive the filename from the last portion of the
