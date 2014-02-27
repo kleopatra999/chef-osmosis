@@ -5,7 +5,6 @@ default[:osmosis][:install_type]  = 'pkg' # 'pkg' or 'tgz'
 default[:osmosis][:pkg_version]   = '0.0.1'
 default[:osmosis][:user]          = 'root'
 default[:osmosis][:group]         = 'root'
-default[:osmosis][:java]          = true
 
 # for pkg install
 default[:osmosis][:installdir]    = '/opt/osmosis'
