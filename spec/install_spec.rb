@@ -39,11 +39,18 @@ describe 'osmosis::install' do
     end
   
     it 'should add apt repository mapzen-public' do
-      chef_run.should add_apt_repository 'mapzen-public'
+      chef_run.should add_apt_repository('mapzen-public').with(
+        uri: 'http://s3.amazonaws.com/mapzen-debian',
+        distribution: 'stable',
+        components: ['main'],
+        key: 'https://s3.amazonaws.com/mapzen-debian/mapzen-debian.gpg.key'
+      )
     end
 
     it 'should install package mapzen-osmosis' do
-      chef_run.should install_package 'mapzen-osmosis'
+      chef_run.should install_package('mapzen-osmosis').with(
+        version: '0.0.1'
+      )
     end
   end
 
