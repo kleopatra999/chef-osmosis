@@ -5,6 +5,9 @@
     },
     "osmosis": {
       "path": "."
+    },
+    "java": {
+      "locked_version": "1.19.2"
     }
   }
 }
