@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'osmosis::install' do
-  context 'install type tgz' do
+  context 'install type tgz with defaults' do
     let (:chef_run) do 
       ChefSpec::Runner.new do |node|
         node.set[:osmosis][:install_type] = 'tgz'
@@ -31,7 +31,7 @@ describe 'osmosis::install' do
     end
   end
 
-  context 'install type pkg' do
+  context 'install type pkg with defaults' do
     let (:chef_run) do 
       ChefSpec::Runner.new do |node|
         node.set[:osmosis][:install_type] = 'pkg'
