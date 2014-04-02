@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'osmosis::install' do
   context 'install type tgz with defaults' do
-    let (:chef_run) do 
+    let(:chef_run) do
       ChefSpec::Runner.new do |node|
         node.set[:osmosis][:install_type] = 'tgz'
       end.converge(described_recipe)
@@ -32,12 +32,12 @@ describe 'osmosis::install' do
   end
 
   context 'install type pkg with defaults' do
-    let (:chef_run) do 
+    let(:chef_run) do
       ChefSpec::Runner.new do |node|
         node.set[:osmosis][:install_type] = 'pkg'
       end.converge(described_recipe)
     end
-  
+
     it 'should add apt repository mapzen-public' do
       chef_run.should add_apt_repository('mapzen-public').with(
         uri: 'http://s3.amazonaws.com/mapzen-debian',
@@ -55,4 +55,3 @@ describe 'osmosis::install' do
   end
 
 end
-

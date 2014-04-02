@@ -7,9 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package 'openjdk-7-jre' do
-  action :remove
-end
-
 include_recipe 'java'
-

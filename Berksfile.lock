@@ -7,7 +7,7 @@
       "path": "."
     },
     "java": {
-      "locked_version": "1.19.2"
+      "locked_version": "1.21.2"
     }
   }
 }

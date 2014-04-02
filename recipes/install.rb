@@ -16,11 +16,11 @@ when 'tgz'
   end
 
   http_request "HEAD #{node[:osmosis][:remote_source]}" do
-    message ""
+    message ''
     url node[:osmosis][:remote_source]
     action :head
-    if File.exists?("#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}")
-      headers "If-Modified-Since" => File.mtime("#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}").httpdate
+    if File.exist?("#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}")
+      headers 'If-Modified-Since' => File.mtime("#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}").httpdate
     end
     notifies :create, "remote_file[#{node[:osmosis][:installdir]}/#{node[:osmosis][:filename]}]", :immediately
   end
@@ -52,4 +52,3 @@ when 'pkg'
     version node[:osmosis][:pkg_version]
   end
 end
-
