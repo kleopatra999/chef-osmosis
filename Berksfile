@@ -1,3 +1,3 @@
 metadata
 
-coobook 'java'
+cookbook 'java'
