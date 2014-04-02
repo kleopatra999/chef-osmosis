@@ -1,10 +1,10 @@
 {
   "sources": {
-    "apt": {
-      "locked_version": "2.1.1"
-    },
     "osmosis": {
       "path": "."
+    },
+    "apt": {
+      "locked_version": "2.3.4"
     },
     "java": {
       "locked_version": "1.21.2"
