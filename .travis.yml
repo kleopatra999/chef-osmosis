@@ -1,0 +1,9 @@
+language: ruby
+cache:
+  directories:
+  - vendor/bundle
+gemfile:
+   - Gemfile
+rvm:
+  - 2.0.0
+script: bundle exec rake travis
