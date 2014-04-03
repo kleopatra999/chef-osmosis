@@ -2,6 +2,10 @@ osmosis Cookbook
 ==================
 Downloads and extracts osmosis
 
+Current Build Status
+--------------------
+[![Build Status](https://secure.travis-ci.org/mapzen/chef-osmosis.png)](http://travis-ci.org/mapzen/chef-osmosis)
+
 Usage
 -----
 #### osmosis::default
