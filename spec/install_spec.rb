@@ -29,6 +29,12 @@ describe 'osmosis::install' do
       remote_file = chef_run.remote_file('/opt/osmosis/osmosis-latest.tgz')
       remote_file.should notify('bash[extract-osmosis]').to(:run).immediately
     end
+
+    it 'should declare a resource extract-osmosis' do
+      chef_run.should_not run_bash('extract-osmosis').with(
+        action: 'nothing'
+      )
+    end
   end
 
   context 'install type pkg with defaults' do
