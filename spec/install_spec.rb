@@ -25,15 +25,19 @@ describe 'osmosis::install' do
       head_request.should notify('remote_file[/opt/osmosis/osmosis-latest.tgz]').to(:create).immediately
     end
 
+    it 'should define a remote file resource for the file' do
+      chef_run.should_not create_remote_file('/opt/osmosis/osmosis-latest.tgz').with(
+        blah: 'flag'
+      )
+    end
+
     it 'should extract osmosis' do
       remote_file = chef_run.remote_file('/opt/osmosis/osmosis-latest.tgz')
       remote_file.should notify('bash[extract-osmosis]').to(:run).immediately
     end
 
     it 'should declare a resource extract-osmosis' do
-      chef_run.should_not run_bash('extract-osmosis').with(
-        action: 'nothing'
-      )
+      chef_run.should_not run_bash 'extract-osmosis'
     end
   end
 
