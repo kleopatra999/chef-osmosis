@@ -2,10 +2,6 @@
 # Cookbook Name:: osmosis
 # Recipe:: install
 #
-# Copyright 2013, Mapzen
-#
-# All rights reserved - Do Not Redistribute
-#
 
 case node[:osmosis][:install_type]
 when 'tgz'
