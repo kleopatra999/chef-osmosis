@@ -6,7 +6,6 @@ Downloads and extracts osmosis
 Current Build Status
 --------------------
 [![Travis Build Status](https://secure.travis-ci.org/mapzen/chef-osmosis.png)](http://travis-ci.org/mapzen/chef-osmosis)
-[![CircleCI Build Status](https://circleci.com/gh/mapzen/chef-osmosis.png?circle-token=2e34aedb4ea6b3cd53244a7ae912cb699599f80c)](https://circleci.com/gh/mapzen/chef-osmosis)
 
 Usage
 -----
