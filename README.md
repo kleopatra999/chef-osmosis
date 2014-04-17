@@ -17,7 +17,7 @@ Attributes
 ### default
 
 #### install_type
-'pkg' or 'tgz'. The former installs osmosis
+'pkg' or 'source'. The former installs osmosis
 as a debian package from the Mapzen debian repo,
 the latter pulls from node[:osmosis][:remote_source] 
 and unpacks the tarball to node[:osmosis][:installdir].
@@ -47,6 +47,12 @@ Directory mode for installdir.
 
 #### remote_source
 Where to download osmosis from if using install_type == 'pkg'
+
+#### symlink
+Only used for install_type 'source'
+When true, symlink from `node[:osmosis][:installdir]/bin/osmosis`
+to /usr/bin/osmosis.
+* default: nil
 
 #### filename
 Only used for install_type 'git'.

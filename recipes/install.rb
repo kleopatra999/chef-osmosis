@@ -35,6 +35,11 @@ when 'tgz'
     BASH
   end
 
+  link "#{node[:osmosis][:installdir]}/bin/osmosis" do
+    to '/usr/bin/osmosis'
+    only_if { node[:osmosis][:symlink] }
+  end
+
 when 'pkg'
   apt_repository 'mapzen-public' do
     uri           'http://s3.amazonaws.com/mapzen-debian'
