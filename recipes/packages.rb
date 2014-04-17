@@ -3,4 +3,4 @@
 # Recipe:: packages
 #
 
-include_recipe 'java'
+include_recipe 'java::default'
