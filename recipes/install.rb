@@ -35,8 +35,8 @@ when 'tgz'
     BASH
   end
 
-  link "#{node[:osmosis][:installdir]}/bin/osmosis" do
-    to '/usr/bin/osmosis'
+  link '/usr/bin/osmosis' do
+    to "#{node[:osmosis][:installdir]}/bin/osmosis"
     only_if { node[:osmosis][:symlink] }
   end
 

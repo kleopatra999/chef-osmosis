@@ -41,7 +41,7 @@ describe 'osmosis::install' do
     end
 
     it 'should not symlink into /usr/bin' do
-      chef_run.should_not create_link '/opt/osmosis/bin/osmosis'
+      chef_run.should_not create_link '/usr/bin/osmosis'
     end
   end
 
@@ -54,8 +54,8 @@ describe 'osmosis::install' do
     end
 
     it 'should create a link from /usr/bin/osmosis to bin/osmosis' do
-      chef_run.should create_link('/opt/osmosis/bin/osmosis').with(
-        to: '/usr/bin/osmosis'
+      chef_run.should create_link('/usr/bin/osmosis').with(
+        to: '/opt/osmosis/bin/osmosis'
       )
     end
   end
