@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.4.3
+-----
+* symlink into /usr/bin option
+* explicit java::default
+
 0.4.1
 -----
 * add `default[:osmosis][:symlink]` option: creates a symlink from 
