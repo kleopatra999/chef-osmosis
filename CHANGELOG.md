@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+0.5.1
+-----
+* when installing from source, create /usr/bin/osmosis symlink by default
+
 0.5.0
 -----
 * pkg install should use common repo

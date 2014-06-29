@@ -15,4 +15,4 @@ default[:osmosis][:installdir]    = '/opt/osmosis'
 default[:osmosis][:dirmode]       = 0755
 default[:osmosis][:remote_source] = 'http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz'
 default[:osmosis][:filename]      = default[:osmosis][:remote_source].split('/').last
-default[:osmosis][:symlink]       = nil
+default[:osmosis][:symlink]       = true

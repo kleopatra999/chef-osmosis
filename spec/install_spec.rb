@@ -40,23 +40,8 @@ describe 'osmosis::install' do
       chef_run.should_not run_bash 'extract-osmosis'
     end
 
-    it 'should not symlink into /usr/bin' do
-      chef_run.should_not create_link '/usr/bin/osmosis'
-    end
-  end
-
-  context 'install type tgz with symlink' do
-    let(:chef_run) do
-      ChefSpec::Runner.new do |node|
-        node.set[:osmosis][:install_type] = 'tgz'
-        node.set[:osmosis][:symlink]      = true
-      end.converge(described_recipe)
-    end
-
-    it 'should create a link from /usr/bin/osmosis to bin/osmosis' do
-      chef_run.should create_link('/usr/bin/osmosis').with(
-        to: '/opt/osmosis/bin/osmosis'
-      )
+    it 'should symlink into /usr/bin' do
+      chef_run.should create_link '/usr/bin/osmosis'
     end
   end
 
