@@ -41,15 +41,7 @@ when 'tgz'
   end
 
 when 'pkg'
-  apt_repository 'mapzen-public' do
-    uri           'http://s3.amazonaws.com/mapzen-debian'
-    distribution  'stable'
-    components    ['main']
-    key           'https://s3.amazonaws.com/mapzen-debian/mapzen-debian.gpg.key'
-  end
-
-  package 'mapzen-osmosis' do
-    action  :install
-    version node[:osmosis][:pkg_version]
+  package 'osmosis' do
+    action :install
   end
 end

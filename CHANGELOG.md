@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+0.5.0
+-----
+* pkg install should use common repo
+
 0.4.3
 -----
 * symlink into /usr/bin option
