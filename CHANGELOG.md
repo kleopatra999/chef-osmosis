@@ -1,10 +1,6 @@
 CHANGELOG
 =========
 
-0.5.0
------
-* remove pkg install
-
 0.4.3
 -----
 * symlink into /usr/bin option
