@@ -1,7 +1,6 @@
 # default attributes
 #
-
-default[:osmosis][:install_type]  = 'pkg' # 'pkg' or 'tgz'
+default[:osmosis][:install_type]  = 'tgz' # 'pkg' or 'tgz'
 
 # for pkg
 #
