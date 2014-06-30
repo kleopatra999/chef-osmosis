@@ -12,7 +12,7 @@ Attributes
 ### default
 
 #### install_type
-'pkg' or 'source'. The former installs osmosis
+'pkg' or 'tgz'. The former installs osmosis
 as a debian package, the latter pulls from node[:osmosis][:url] 
 and unpacks the tarball to node[:osmosis][:installdir]. Ark will
 create a symlink to '/usr/local/bin/osmosis', assuming you use the defaults.
