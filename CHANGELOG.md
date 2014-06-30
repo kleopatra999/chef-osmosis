@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.6.0
+-----
+* rewrite to use ark
+* vagrant to ubuntu 14.04
+
 0.5.2
 -----
 * make install from source default
@@ -27,4 +32,3 @@ Defaults to nil.
 0.4.0
 -----
 * supports install from pkg or tgz
-

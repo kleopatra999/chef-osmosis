@@ -4,9 +4,9 @@ maintainer_email 'grant@mapzen.com'
 license          'GPL v3'
 description      'Installs/Configures osmosis'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.5.2'
+version          '0.6.0'
 
-%w(apt java).each do |dep|
+%w(apt ark java).each do |dep|
   depends dep
 end
 

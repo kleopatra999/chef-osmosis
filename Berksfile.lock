@@ -1,12 +1,22 @@
 DEPENDENCIES
+  ark
   java
   osmosis
     path: .
     metadata: true
 
 GRAPH
-  apt (2.3.10)
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.4.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  chef_handler (1.1.6)
   java (1.22.0)
-  osmosis (0.5.0)
+  osmosis (0.6.0)
     apt (>= 0.0.0)
+    ark (>= 0.0.0)
     java (>= 0.0.0)
+  windows (1.31.0)
+    chef_handler (>= 0.0.0)

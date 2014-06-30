@@ -13,46 +13,29 @@ Attributes
 
 #### install_type
 'pkg' or 'source'. The former installs osmosis
-as a debian package from the Mapzen debian repo,
-the latter pulls from node[:osmosis][:remote_source] 
-and unpacks the tarball to node[:osmosis][:installdir].
-* default: pkg
+as a debian package, the latter pulls from node[:osmosis][:url] 
+and unpacks the tarball to node[:osmosis][:installdir]. Ark will
+create a symlink to '/usr/local/bin/osmosis', assuming you use the defaults.
+* default: tgz
 
 #### installdir
-Only used for install_type 'git'.
-Where should osmosis be installed if using install_type == 'pkg'
-* default: /opt/osmosis
+Only used for install_type 'tgz'.
+* default: /usr/local
 
 #### user
-Only used for install_type 'git'.
+Only used for install_type 'tgz'.
 User to install osmosis as. The user will
 not be created by the cookbook, so it must
 already exist.
 * default: root
 
-#### group
-Only used for install_type 'git'.
-Group to install osmosis with.
-* default: root
+#### url
+Where to download osmosis from if using install_type == 'tgz'
+* default: http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-#{node[:osmosis][:version]}.tgz
 
-#### dirmode
-Only used for install_type 'git'.
-Directory mode for installdir.
-* default: 0755
-
-#### remote_source
-Where to download osmosis from if using install_type == 'pkg'
-
-#### symlink
-Only used for install_type 'source'
-When true, symlink from `node[:osmosis][:installdir]/bin/osmosis`
-to /usr/bin/osmosis.
-* default: nil
-
-#### filename
-Only used for install_type 'git'.
-Derive the filename from the last portion of the
-url download string.
+#### version
+Only used for install_type 'tgz'
+* default: 0.43.1
 
 Contributing
 ------------
