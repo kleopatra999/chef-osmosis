@@ -9,7 +9,7 @@ describe 'osmosis::install' do
     end
 
     it 'should ark osmosis' do
-      chef_run.should install_ark 'osmosis'
+      expect(chef_run).to install_ark 'osmosis'
     end
   end
 
@@ -21,7 +21,7 @@ describe 'osmosis::install' do
     end
 
     it 'should install package osmosis' do
-      chef_run.should install_package('osmosis')
+      expect(chef_run).to install_package('osmosis')
     end
   end
 
