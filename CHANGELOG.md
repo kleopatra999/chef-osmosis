@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+0.6.1
+-----
+* use github to pull release
+
 0.6.0
 -----
 * rewrite to use ark
