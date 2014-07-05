@@ -6,5 +6,5 @@ default[:osmosis][:user]          = 'root'
 # for tgz
 #
 default[:osmosis][:version]     = '0.43.1'
-default[:osmosis][:url]         = "https://github.com/openstreetmap/osmosis/archive/#{node[:osmosis][:version]}.tar.gz"
+default[:osmosis][:url]         = "http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-#{node[:osmosis][:version]}.tgz"
 default[:osmosis][:installdir]  = '/usr/local'
